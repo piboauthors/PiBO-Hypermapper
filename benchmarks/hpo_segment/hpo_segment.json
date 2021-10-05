@@ -1,0 +1,42 @@
+{
+    "application_name": "hpo_segment",
+    "optimization_objectives": ["Value"],
+    "design_of_experiment": {
+        "number_of_samples": 6
+    },
+    "optimization_iterations": 50,
+    "models":{
+        "model": "gaussian_process"
+    },
+    "custom_gaussian_prior_means": [-3, 5, null, -3, 6],
+    "custom_gaussian_prior_stds": [2, 1.5, null, 1.25, 1.5],
+    "resample_mean": false,
+    "estimate_multivariate_gaussian": false,
+    "input_parameters" : {
+        "alpha": {
+            "parameter_type" : "real",
+            "values" : [-8, 0],
+            "prior": "custom_gaussian"
+        },
+        "batch_size": {
+            "parameter_type" : "real",
+            "values" : [2, 8],
+            "prior": "custom_gaussian"
+        },
+        "depth": {
+            "parameter_type" : "ordinal",
+            "values" : [1, 2, 3],
+            "prior": [0.0003, 0.1192, 0.8805]
+        },
+        "learning_rate_init": {
+            "parameter_type" : "real",
+            "values" : [-5, 0],
+            "prior": "custom_gaussian"
+        },
+        "width": {
+            "parameter_type" : "real",
+            "values" : [4, 10],
+            "prior": "custom_gaussian"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "application_name": "branin",
+    "optimization_objectives": ["Value"],
+    "design_of_experiment": {
+        "number_of_samples": 3
+    },
+    "optimization_iterations": 200,
+    "prior_estimation_file": "prior_data/branin_prior.csv",
+    "models":{
+        "model": "gaussian_process"
+    },
+    "custom_gaussian_prior_means": [[-3.1415, 3.1415, 9.42478], [12.275, 2.275, 2.475]],
+    "custom_gaussian_prior_stds": [[0.15, 0.15, 0.15], [0.15, 0.15, 0.15]],
+    "resample_mean": true,
+    "estimate_multivariate_gaussian": false,
+    "input_parameters" : {
+        "x1": {
+            "parameter_type" : "real",
+            "values" : [-5, 10],
+            "prior": "gaussian_mixture"
+        },
+        "x2": {
+            "parameter_type" : "real",
+            "values" : [0, 15],
+            "prior": "gaussian_mixture"
+        }
+    }
+}

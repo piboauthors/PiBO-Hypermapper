@@ -1,0 +1,52 @@
+{
+    "alpha":
+   {
+        "range":[-8, -0],
+        "dist": "gaussian",
+        "params":
+       {
+               "mean": [-3],
+                "std": [2]
+       }   
+   },    
+   "batch_size":
+   {
+       "range":[2, 8],
+       "dist": "gaussian",
+       "params":
+      {
+              "mean": [5],
+               "std": [1.5]
+      }   
+  },    
+   "depth":
+   {
+       "range":[0, 1],
+       "dist": "categorical",
+       "params":
+       {
+	    "values": [0, 1, 2],
+            "probs": [0.0003, 0.1192, 0.8805]
+       }   
+   },    
+   "learning_rate_init":
+   {
+       "range":[-5, 0],
+       "dist": "gaussian",
+       "params":
+      {
+              "mean": [-3],
+               "std": [1.25]
+      }
+  },    
+   "width":
+   {
+       "range":[4, 10],
+       "dist": "gaussian",
+       "params":
+       {
+               "mean": [6],
+               "std": [1.5]
+       }   
+   }
+}

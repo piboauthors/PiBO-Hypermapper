@@ -1,0 +1,22 @@
+{
+    "application_name": "svm_42",
+    "optimization_objectives": ["Value"],
+    "optimization_iterations": 97,
+    "models": {
+        "model": "gaussian_process"
+    },
+    "prior_estimation_file": "prior_data/svm_prior.csv",
+    "design_of_experiment": {
+        "number_of_samples": 3
+    },
+    "input_parameters": {
+        "x0": {
+            "parameter_type": "real",
+            "values": [0,1]
+        },
+        "x1": {
+            "parameter_type": "real",
+            "values": [0, 1]
+        }
+    }
+}
