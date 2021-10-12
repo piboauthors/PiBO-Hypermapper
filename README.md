@@ -1,3 +1,45 @@
+PiBO-Hypermapper
+
+This repository is supplied to reproduce the experiments of PiBO: Augmenting Acquisition Functions with User Beliefs for Bayesian Optimization.
+
+To run PiBO-Hypermapper, first install the conda environment provided in pibo-hypermapper.yml:
+
+**conda env create -f hypermapper-pibo.yml**
+
+Then, run a benchmark with:
+
+###Branin:
+
+#Options:
+prior_index: [0-19], int
+prior_strength: {strong, weak, wrong}
+
+#To run:
+**python benchmarks/branin/branin.py {prior_index}} prior_strength**
+
+###Profet
+
+#Options:
+prior_index: [0-19], int
+prior_strength: {strong, weak, wrong}
+benchmark_name: {svm, fcnet, xgboost}
+
+#To run:
+**python benchmarks/profet/{benchmark_name}.py {prior_index} {prior_strength}**
+
+###HPOBench 
+
+#Options:
+benchmark_name: {hpo_australian, hpo_blood, hpo_credit, hpo_kc1, hpo_segment, hpo_vehicle}
+
+#To run:
+**python benchmarks/{benchmark_name}/eval.py 0 strong**
+
+
+
+
+_____________________________________________________________________________________________
+
 # HyperMapper
 
 [![Build Status](https://travis-ci.com/luinardi/hypermapper.svg?branch=master)](https://travis-ci.com/luinardi/hypermapper)
