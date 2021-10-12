@@ -10,29 +10,29 @@ Then, run a benchmark with:
 
 ### Branin:
 
-# Options:
+#### Options:
 prior_index: [0-19], int
 prior_strength: {strong, weak, wrong}
 
-# To run:
+#### To run:
 **python benchmarks/branin/branin.py {prior_index}} prior_strength**
 
 ### Profet
 
-# Options:
+#### Options:
 prior_index: [0-19], int
 prior_strength: {strong, weak, wrong}
 benchmark_name: {svm, fcnet, xgboost}
 
-# To run:
+#### To run:
 **python benchmarks/profet/{benchmark_name}.py {prior_index} {prior_strength}**
 
 ### HPOBench 
 
-# Options:
+#### Options:
 benchmark_name: {hpo_australian, hpo_blood, hpo_credit, hpo_kc1, hpo_segment, hpo_vehicle}
 
-# To run:
+#### To run:
 **python benchmarks/{benchmark_name}/eval.py 0 strong**
 
 
